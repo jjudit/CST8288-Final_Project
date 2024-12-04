@@ -19,7 +19,7 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author judit
  */
-@WebServlet("/RegisterServlet")
+
 public class RegisterServlet extends HttpServlet {
     private final UserDAO userDAO = new UserDAO();
 

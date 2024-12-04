@@ -1,11 +1,86 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<web-app version="2.5" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+<web-app version="2.5" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee           http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
     <display-name>CST8288 Final Project</display-name>
-    
-   
+    <!-- Welcome File -->
+    <welcome-file-list>
+        <welcome-file>Login.jsp</welcome-file>
+    </welcome-file-list>
+    <!-- Session Configuration -->
+    <servlet-mapping>
+        <servlet-name>CourseDetailsServlet</servlet-name>
+        <url-pattern>/CourseDetailsServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ViewRequestsServlet</servlet-name>
+        <url-pattern>/ViewRequestsServlet</url-pattern>
+    </servlet-mapping>
     <session-config>
-        <session-timeout>
-            30
-        </session-timeout>
+        <session-timeout>30</session-timeout>
     </session-config>
+    <!-- Servlet Definitions and Mappings -->
+    <servlet>
+        <servlet-name>RegisterServlet</servlet-name>
+        <servlet-class>com.Final_Project.Academic_Exchange_Platform.RegisterServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>CourseDetailsServlet</servlet-name>
+        <servlet-class>com.Final_Project.Academic_Exchange_Platform.CourseDetailsServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ViewRequestsServlet</servlet-name>
+        <servlet-class>com.Final_Project.Academic_Exchange_Platform.ViewRequestsServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>RegisterServlet</servlet-name>
+        <url-pattern>/RegisterServlet</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>LoginServlet</servlet-name>
+        <servlet-class>com.Final_Project.Academic_Exchange_Platform.LoginServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LoginServlet</servlet-name>
+        <url-pattern>/LoginServlet</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>ProfileServlet</servlet-name>
+        <servlet-class>com.Final_Project.Academic_Exchange_Platform.ProfileServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ProfileServlet</servlet-name>
+        <url-pattern>/ProfileServlet</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>CourseServlet</servlet-name>
+        <servlet-class>com.Final_Project.Academic_Exchange_Platform.CourseServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>CourseServlet</servlet-name>
+        <url-pattern>/CourseServlet</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>SearchServlet</servlet-name>
+        <servlet-class>com.Final_Project.Academic_Exchange_Platform.SearchServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SearchServlet</servlet-name>
+        <url-pattern>/SearchServlet</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>RequestServlet</servlet-name>
+        <servlet-class>com.Final_Project.Academic_Exchange_Platform.RequestServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>RequestServlet</servlet-name>
+        <url-pattern>/RequestServlet</url-pattern>
+    </servlet-mapping>
+    <!-- Error Pages -->
+    <error-page>
+        <error-code>404</error-code>
+        <location>/Error.jsp</location>
+    </error-page>
+    <error-page>
+        <error-code>500</error-code>
+        <location>/Error.jsp</location>
+    </error-page>
 </web-app>
